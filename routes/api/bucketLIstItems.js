@@ -1,10 +1,10 @@
 const {Router} = require('express')
-const res = require('express/lib/response')
 const BucketListItem = require('../../models/BucketListItem')
 
 const router =Router()
 
 router.get('/', async (req, res) => {
+   
 try{
     const bucketListItems = await BucketListItem.find()
     if(!bucketListItems) throw new Error('No BucketListItems')
